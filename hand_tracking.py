@@ -34,7 +34,9 @@ while True:
 
         # loop through 
         for handLms in results.multi_hand_landmarks:
-            mpDraw.draw_landmarks(img, handLms)
+            mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
+
+    
 
     #dislays the frame with the location dots onto the screen
     cv2.imshow("Image", img)
